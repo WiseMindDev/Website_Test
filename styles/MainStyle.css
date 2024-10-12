@@ -1,0 +1,305 @@
+:root {
+  --color1: #eeeeee;
+  --color2: #001f3f;
+  --color3: #3a6d8c;
+  --color4: #6a9ab0;
+  --color5: #ead8b1;
+  --color6: #33658a;
+  --color7: #86bbd8;
+  --color8: #273b09;
+  --color9: #f5f5f5;
+  --color10: #48cfcb;
+  --color11: #229799;
+  --color12: #424242;
+  --color13: #16423c;
+  --color14: #6a9c89;
+  --color15: #c4dad2;
+  --color16: #e9efec;
+  --color17: #279eff;
+  --color18: #fba834;
+  --color19: #0766ad;
+  --color20: #482121;
+  --bgc: #f0f8ff;
+}
+
+@font-face {
+  font-family: Samim;
+  src: url(../resources/fonts/Samim.ttf);
+}
+
+@font-face {
+  font-family: Shekari;
+  src: url(../resources/fonts/Shekari.ttf);
+}
+
+@font-face {
+  font-family: Samim-FD;
+  src: url(../resources/fonts/Samim-FD.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 300vh;
+  /* background-image: url(images/kari-shea-1SAnrIxw5OY-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  background-color: var(--bgc);
+  font-family: "Samim", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--color11);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 0.3rem; */
+  z-index: 999;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--color9);
+}
+
+nav a:hover {
+  /* background-color: #f0f0f0; */
+  background-color: var(--color10);
+}
+
+nav li:first-child {
+  margin-left: auto;
+}
+
+.mobile__sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(132, 120, 120, 0.203);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mobile__sidebar li {
+  width: 100%;
+}
+
+.mobile__sidebar a {
+  width: 100%;
+}
+
+.menue__btn {
+  display: none;
+}
+
+/* *********** Main Content **********  */
+
+.main_content {
+  margin: 0.2rem;
+}
+
+/* *********** Hero Section **********  */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 50vh;
+  font-size: 2.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: var(--color7);
+  background-image: url(../resources/images/temp/slide-three.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* filter: blur(2px); */
+  margin-bottom: 0.3rem;
+  margin-top: 3.5rem;
+}
+
+.hero_p {
+  color: var(--color7);
+}
+
+/* *********** Product Section **********  */
+/* .products {
+  min-width: 100%;
+  min-height: 50vh;
+  border-radius: 0.5rem;
+} */
+/* ========== Produts part style starts ========== */
+
+.carousel-container {
+  width: 100%;
+  /* max-width: 1000px; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: var(--color16);
+  position: relative;
+}
+
+.carousel-item {
+  display: none;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateX(100%);
+  width: 100%;
+}
+
+.carousel-item.active {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-item.next,
+.carousel-item.prev {
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+
+.carousel-item.next {
+  transform: translateX(100%);
+}
+
+.carousel-item.prev {
+  transform: translateX(-100%);
+}
+
+.carousel-item img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-text {
+  padding: 20px;
+  width: 45%;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+}
+
+/* دکمه‌های نواری */
+button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  font-size: 24px;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button i {
+  pointer-events: none; /* جلوگیری از اثر کلیک روی آیکون */
+}
+
+/* تغییر استایل دکمه‌ها در هنگام هاور */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* استایل ریسپانسیو */
+@media (max-width: 768px) {
+  .carousel-item {
+    flex-direction: column;
+  }
+
+  .carousel-item img,
+  .carousel-text {
+    width: 100%;
+  }
+
+  .carousel-text {
+    order: -1;
+    text-align: center;
+  }
+
+  button {
+    padding: 5px;
+  }
+}
+
+/* ========== Produts part style ends ========== */
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menue__btn {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile__sidebar {
+    width: 100%;
+  }
+}
