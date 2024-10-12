@@ -1,6 +1,7 @@
 const items = document.querySelectorAll(".carousel-item");
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
 let currentIndex = 0;
-let startX, endX;
 
 // تابع نمایش آیتم‌های فعال
 function showItem(index) {
@@ -29,11 +30,14 @@ function goToPrev() {
 }
 
 // رویداد لمسی برای شروع Swipe
+let startX, endX;
+
+// ثبت نقطه شروع لمسی
 document.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
 });
 
-// رویداد لمسی برای پایان Swipe و تشخیص حرکت
+// ثبت نقطه پایان لمسی و تشخیص حرکت
 document.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
 
@@ -44,6 +48,10 @@ document.addEventListener("touchend", (e) => {
     goToPrev(); // حرکت به سمت راست (اسلاید قبلی)
   }
 });
+
+// افزودن رویدادهای کلیک برای دکمه‌ها
+nextButton.addEventListener("click", goToNext);
+prevButton.addEventListener("click", goToPrev);
 
 // نمایش آیتم اول هنگام بارگذاری صفحه
 showItem(currentIndex);
