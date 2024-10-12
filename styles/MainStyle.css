@@ -56,7 +56,7 @@ body {
   background-color: var(--bgc);
   font-family: "Samim", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/* ========== START NAVIGATION MENUE ========== */
 nav {
   position: fixed;
   top: 0;
@@ -123,15 +123,15 @@ nav li:first-child {
 .menue__btn {
   display: none;
 }
+/* ========== END NAVIGATION MENUE ========== */
 
-/* *********** Main Content **********  */
+/* ========== Main Content ==========  */
 
 .main_content {
   margin: 0.2rem;
 }
 
-/* *********** Hero Section **********  */
-
+/* ========== START HERO SECTION ==========  */
 .hero {
   display: flex;
   justify-content: center;
@@ -155,7 +155,7 @@ nav li:first-child {
   color: var(--color4);
 }
 
-/* *********** Product Section **********  */
+/* ========== Product Section ==========  */
 /* .products {
   min-width: 100%;
   min-height: 50vh;
@@ -223,6 +223,7 @@ nav li:first-child {
 }
 
 h3 {
+  color: var(--color10);
   margin-bottom: 10px;
 }
 
