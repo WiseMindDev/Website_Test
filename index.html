@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ========== CSS STYLESHEET LINK ========== -->
     <link rel="stylesheet" href="styles/MainStyle.css" />
-    <!-- لینک فونت آوسام برای آیکون‌ها -->
+
+    <!-- ========== FONT AWESOME LINK ========== -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -12,11 +14,10 @@
     <title>Bani Adam</title>
   </head>
   <body>
-    <!-- header -->
+    <!-- ========== START HEADER ========== -->
     <header>
-      <!-- <div class="logo">نام شرکت</div> -->
       <nav>
-        <!-- Mobile view -->
+        <!-- ========== START MOBILE VIEW ========== -->
         <ul class="mobile__sidebar">
           <li onclick="hideSidebar()">
             <a href="#">
@@ -35,18 +36,21 @@
           <li><a href="#about_us">درباره ما</a></li>
           <li><a href="#produtcs">محصولات</a></li>
           <li><a href="#services">خدمات پس از فروش</a></li>
-          <li><a href="#contanct_us">تماس با ما</a></li>
+          <li><a href="#contanct">تماس با ما</a></li>
         </ul>
+        <!-- ========== END MOBILE VIEW ========== -->
 
-        <!-- Dekstop view -->
+        <!-- ========== START DESKTOP VIEW ========== -->
         <ul>
           <li><a href="#">نام شرکت</a></li>
           <li class="hideOnMobile"><a href="#about_us">درباره ما</a></li>
           <li class="hideOnMobile"><a href="#produtcs">محصولات</a></li>
           <li class="hideOnMobile">
-            <a href="#serivices">خدمات پس از فروش</a>
+            <a href="#services">خدمات پس از فروش</a>
           </li>
-          <li class="hideOnMobile"><a href="#contact_us">تماس با ما</a></li>
+          <li class="hideOnMobile"><a href="#contanct">تماس با ما</a></li>
+
+          <!-- ==========  MENUE BUTTON ========== -->
           <li class="menue__btn" onclick="showSidebar()">
             <a href="#">
               <svg
@@ -62,13 +66,15 @@
             </a>
           </li>
         </ul>
+        <!-- ========== END DESKTOP VIEW ========== -->
       </nav>
     </header>
+    <!-- ========== END HEADER ========== -->
 
     <!-- ========== START MAIN CONTENT ========== -->
     <div class="main_content">
       <!-- ========= START HERO SECTION ========== -->
-      <section class="hero">
+      <section class="hero" id="about_us">
         <div class="hero_text">
           <!-- <h1 class="hero_h1">متن امتحانی جهت تست</h1> -->
           <p class="hero_p">
@@ -198,21 +204,61 @@
               </div>
             </div>
           </div>
-          <!-- نوار سمت چپ (دکمه قبلی) -->
+          <!-- ========== LEFT BUTTON -->
           <button class="prev">
             <i class="fas fa-chevron-left"></i>
           </button>
-          <!-- نوار سمت راست (دکمه بعدی) -->
+          <!-- ========== RIGHT BUTTON ========== -->
           <button class="next">
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
       </div>
       <!-- ========== END PRODUCT SECTION ========== -->
+
+      <!-- ========== START SERVICES ========== -->
+      <section class="services" id="services">
+        <p class="services_p">
+          خدمات پس از فروش ما در هر زمان و هر مکان آماده ارائه خدمات و پشتیبانی
+          به مشتریان عزیز هستیم.
+        </p>
+      </section>
+      <!-- ========== END SERVICES ========== -->
+
+      <!-- ========== START CONTACT US ========== -->
+      <section class="contact_container" id="contanct">
+        <div class="wrapper">
+          <section class="info">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit at,
+              laudantium dolores voluptatibus nesciunt blanditiis praesentium
+              voluptas animi, corporis temporibus aspernatur inventore eligendi
+              nisi iste? Explicabo quod exercitationem incidunt error?
+            </p>
+          </section>
+
+          <section class="contact_form">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              repellat consequatur iste. Eligendi delectus quisquam ipsa veniam
+              sit sequi, illo perspiciatis voluptate rem ea unde fuga similique
+              molestiae earum ducimus. Magni, repellat dolorum itaque et qui
+              facilis? Iusto facilis culpa tempore eaque suscipit fugiat
+              perspiciatis earum at? Et quisquam eum necessitatibus veniam,
+              deleniti totam velit exercitationem accusantium? Quam, est illum!
+              Possimus ipsa quia doloribus quos at fugit aperiam? Laborum ad
+              exercitationem aut quo maxime facere, aliquid quidem voluptas
+              omnis! Error facilis reprehenderit repellendus ex accusantium,
+              nemo nisi explicabo modi consequuntur!
+            </p>
+          </section>
+        </div>
+      </section>
+      <!-- ========== END CONTACT US ========== -->
     </div>
     <!-- ========== END MAIN CONTENT ========== -->
 
-    <!-- Link JavaScript codes -->
+    <!-- ========== JS CODES LINK ========== -->
     <script src="JavaScript/ScriptProduts.js"></script>
     <script src="JavaScript/ScriptMobileMenue.js"></script>
     <script src="JavaScript/Swipe.js"></script>
