@@ -292,6 +292,13 @@ button:hover {
   }
 }
 
+/* مخفی کردن دکمه‌ها در حالت موبایل */
+@media (max-width: 768px) {
+  button {
+    display: none;
+  }
+}
+
 /* ========== Produts part style ends ========== */
 
 @media (max-width: 800px) {
