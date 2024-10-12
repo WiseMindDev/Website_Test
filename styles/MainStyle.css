@@ -246,6 +246,8 @@ button {
   align-items: center;
   z-index: 10;
   font-size: 24px;
+  opacity: 1; /* دکمه‌ها در ابتدا قابل مشاهده‌اند */
+  transition: opacity 0.3s ease; /* محو شدن و ظاهر شدن به صورت روان */
 }
 
 button.prev {
@@ -256,6 +258,10 @@ button.next {
   right: 0;
 }
 
+/* محو شدن دکمه‌ها */
+button.hidden {
+  opacity: 0; /* دکمه‌ها محو می‌شوند */
+}
 button i {
   pointer-events: none; /* جلوگیری از اثر کلیک روی آیکون */
 }
