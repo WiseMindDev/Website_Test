@@ -292,12 +292,20 @@ button:hover {
   }
 }
 
-/* مخفی کردن دکمه‌ها در حالت موبایل */
+.mb-view-gif {
+  display: none;
+}
+
+/* ========== START MOBILE VIEW ARROW ========== */
 @media (max-width: 768px) {
-  button {
-    display: none;
+  .mb-view-gif {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color9);
   }
 }
+/* ========== END MOBILE VIEW ARROW ========== */
 
 /* ========== Produts part style ends ========== */
 
