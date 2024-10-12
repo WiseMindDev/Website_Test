@@ -176,7 +176,7 @@ nav li:first-child {
   display: flex;
   overflow: hidden;
   border: 1px solid #ddd;
-  background-color: var(--color16);
+  background-color: var(--color9);
   position: relative;
 }
 
@@ -300,9 +300,10 @@ button:hover {
 @media (max-width: 768px) {
   .mb-view-gif {
     display: block;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color9);
+    margin-inline: auto;
+    width: 50px;
+    height: 50px;
+    rotate: 180deg;
   }
 }
 /* ========== END MOBILE VIEW ARROW ========== */
