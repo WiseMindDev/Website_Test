@@ -48,7 +48,7 @@ html {
 }
 
 body {
-  min-height: 250vh;
+  min-height: 230vh;
   /* background-image: url(images/kari-shea-1SAnrIxw5OY-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -186,7 +186,6 @@ nav li:first-child {
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
-  margin-bottom: 0.3rem;
 }
 
 .carousel {
@@ -332,30 +331,53 @@ button:hover {
 /* ========== START SERVICES ========== */
 .services {
   width: 100%;
-  height: 40vh;
-  background-color: var(--color14);
+  height: 30vh;
+  margin-bottom: 1rem;
+  /* display: flex; */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover; */
 }
+
+/* .services_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+} */
+
+.services img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+}
+
+.services p {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color20);
+}
+
 /* ========== END SERVICES  ========== */
 
-.services {
-  margin-bottom: 0.3rem;
-}
-
 /* ========== START CONTACT US ========== */
-.contact_container {
+/* .contact_container {
   width: 100%;
   height: 55vh;
   border-radius: 0.5rem;
 }
 
 .wrapper {
-  /* width: 100%; */
+  /* width: 100%; --
+  /* height: 50vh; --
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.3rem;
-  /* flex-wrap: wrap; */
-}
+  /* background-color: red; --
+  /* flex-wrap: wrap; --
+} */
 /* ------------ START INFO PART IN CONTACT SECTION ---------- */
 
 .info {
@@ -379,41 +401,12 @@ button:hover {
 
 /* ********** START SOCIAL PART BUTTONS ********** */
 
-.button-63 {
-  /* align-items: center; */
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  /* display: flex; */
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  /* justify-content: center; */
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
+.social_btn {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffffff, #d8dfe6);
+  box-shadow: 14px 14px 28px #ccd3d9, -14px -14px 28px #ffffff;
 }
 
-.button-63:active,
-.button-63:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-63 {
-    font-size: 24px;
-    min-width: 196px;
-  }
-}
 /* ********** START SOCIAL PART BUTTONS ********** */
 
 /* ------------ END SOCIAL PART IN CONTACT SECTION ---------- */
