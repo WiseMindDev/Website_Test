@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: var(--color11);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+
+      nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      nav li {
+        height: 50px;
+      }
+
+      nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: var(--color9);
+      }
+
+      nav a:hover {
+        background-color: var(--color10);
+      }
+
+      nav li:first-child {
+        margin-left: auto;
+      }
+
+      .mobile__sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(132, 120, 120, 0.203);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .mobile__sidebar li {
+        width: 100%;
+      }
+
+      .mobile__sidebar a {
+        width: 100%;
+      }
+
+      .menu__btn {
+        display: none;
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--color9);
+      }
+
+      .menu__btn:hover {
+        color: var(--color10);
+      }
+
+      @media (max-width: 800px) {
+        .hideOnMobile {
+          display: none;
+        }
+
+        .menu__btn {
+          display: block;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .mobile__sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- ========== START MOBILE VIEW =========== -->
+      <ul class="mobile__sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li><a href="#about_us">درباره ما</a></li>
+        <li><a href="#products">محصولات</a></li>
+        <!-- اصلاح املایی -->
+        <li><a href="#services">خدمات پس از فروش</a></li>
+        <li><a href="#contact">تماس با ما</a></li>
+      </ul>
+      <!-- ========== END MOBILE VIEW ========== -->
+
+      <!-- ========== START DESKTOP VIEW ========== -->
+      <ul>
+        <li><a href="#">نام شرکت</a></li>
+        <li class="hideOnMobile"><a href="#about_us">درباره ما</a></li>
+        <li class="hideOnMobile"><a href="#products">محصولات</a></li>
+        <!-- اصلاح املایی -->
+        <li class="hideOnMobile"><a href="#services">خدمات پس از فروش</a></li>
+        <li class="hideOnMobile"><a href="#contact">تماس با ما</a></li>
+      </ul>
+
+      <!-- دکمه منو برای نمای موبایل -->
+      <button class="menu__btn" onclick="showSidebar()">☰</button>
+    </nav>
+
+    <script>
+      function showSidebar() {
+        const Sidebar = document.querySelector(".mobile__sidebar");
+        Sidebar.style.display = "flex";
+      }
+
+      function hideSidebar() {
+        const Sidebar = document.querySelector(".mobile__sidebar");
+        Sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
