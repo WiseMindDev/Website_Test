@@ -333,18 +333,7 @@ button:hover {
   width: 100%;
   height: 30vh;
   margin-bottom: 1rem;
-  /* display: flex; */
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: cover; */
 }
-
-/* .services_wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-} */
 
 .services img {
   width: 100%;
@@ -357,6 +346,16 @@ button:hover {
   text-align: center;
   font-size: 2rem;
   color: var(--color20);
+}
+
+@media (max-width: 768px) {
+  .services_img {
+    background-image: url(../resources/images/MobileView.jpeg);
+    /* width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex; */
+  }
 }
 
 /* ========== END SERVICES  ========== */
